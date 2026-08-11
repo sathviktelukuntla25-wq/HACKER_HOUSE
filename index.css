@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #0c6838; /* Exact Hacker House Goa Green */
+    color: #f8fafc;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  code, .font-mono {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+/* 3D Perspective & Transform Utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* 3D Exploded Layer Transformations */
+.exploded-layer-1 {
+  transform: translateZ(25px);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.exploded-layer-2 {
+  transform: translateZ(55px);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.exploded-layer-3 {
+  transform: translateZ(85px);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Holographic 3D Foil Shimmer */
+.holo-foil {
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 0, 122, 0.25) 25%,
+    rgba(250, 204, 21, 0.35) 45%,
+    rgba(6, 182, 212, 0.35) 65%,
+    transparent 100%
+  );
+  background-size: 250% 250%;
+  mix-blend-mode: color-dodge;
+}
+
+/* Hacker House Goa signature glow effects */
+.glow-pink {
+  box-shadow: 0 0 30px rgba(255, 0, 122, 0.5);
+}
+
+.glow-gold {
+  box-shadow: 0 0 30px rgba(250, 204, 21, 0.5);
+}
+
+@keyframes float-3d {
+  0%, 100% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateX(4deg) rotateY(-4deg);
+  }
+}
+
+.animate-float-3d {
+  animation: float-3d 6s ease-in-out infinite;
+}
+
+/* Hacker House Goa Glassmorphism Fills */
+.glass-panel-goa {
+  background: rgba(8, 77, 40, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(250, 204, 21, 0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #094726;
+}
+::-webkit-scrollbar-thumb {
+  background: #0f683a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #15854b;
+}
